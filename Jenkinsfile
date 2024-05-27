@@ -1,9 +1,25 @@
 pipeline {
 agent any
 stages {
-	stage('Hello'){
+	stage('Requirements') {
 		steps {
-			echo "Hello, I'm using a Jenkins file! "
+			echo "This is gathering the requirements..."
+		}
+	}
+	stage('Build') {
+		steps {
+			echo "This is building the packages..."
+			echo "Building python virtual env"
+		}
+	}
+	stage('Test') {
+		steps {
+			echo "This is testing the package..."
+		}
+	}
+	stage('Report') {
+		steps {
+			echo "This is the report..."
 		}
 	}
 }
