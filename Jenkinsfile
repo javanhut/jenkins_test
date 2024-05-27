@@ -4,7 +4,9 @@ stages {
 	stage('Requirements') {
 		steps {
 			echo "This is gathering the requirements..."
-			sh "python --version"
+			sh "chmod +x ./print_hello.sh"
+			sh "cat ./print_hello.sh"
+			sh "./print_hello.sh"
 		}
 	}
 	stage('Build') {
