@@ -4,6 +4,7 @@ stages {
 	stage('Requirements') {
 		steps {
 			echo "This is gathering the requirements..."
+			sh "python --version"
 		}
 	}
 	stage('Build') {
